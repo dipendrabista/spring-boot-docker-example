@@ -1,0 +1,20 @@
+step 1:Go to DockerHub, create one repository for images to upload
+step 2:Enable expose the Daemon on TCP setting in Docker GUI tools
+step 3:Add maven spotyfy plugin and reference the newly created Images
+step 4:mvn clean package dockerfile:push
+
+########################################################################
+Note: In order to provide docker hub credentials,i have used <useMavenSettingsForAuth></useMavenSettingsForAuth>
+      inside maven docker plugin!
+
+    place given server tag inside maven setting servers tag
+    <server>
+        <id>hub.docker.com</id>
+        <username>dipendrabista</username>
+        <password>Dipen@455</password>
+    </server>
+
+
+  or
+  fire command to login dockerhub
+    docker login -u "dipendrabista" -p "mydockerhubpass"
